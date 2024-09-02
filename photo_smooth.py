@@ -28,7 +28,7 @@ class Propagator(nn.Module):
         if type(initImg) == str:
             B = scipy.misc.imread(initImg, mode='RGB').astype(np.float64) / 255
         else:
-            B = scipy.asarray(initImg).astype(np.float64) / 255
+            B = np.asarray(initImg).astype(np.float64) / 255
             # B = self.
         # B = scipy.misc.imread(initImg, mode='RGB').astype(np.float64)/255
         h1,w1,k = B.shape
