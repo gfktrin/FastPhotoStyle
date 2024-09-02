@@ -35,7 +35,6 @@ class Propagator(nn.Module):
         h = h1 - 4
         w = w1 - 4
         B = B[int((h1-h)/2):int((h1-h)/2+h),int((w1-w)/2):int((w1-w)/2+w),:]
-        content = Image.fromarray(content)
         content = content.resize((w, h), Image.ANTIALIAS)
         B = self.__replication_padding(B,2)
         content = self.__replication_padding(content,2)
